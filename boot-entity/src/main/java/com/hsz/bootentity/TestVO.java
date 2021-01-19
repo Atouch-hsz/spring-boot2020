@@ -1,5 +1,6 @@
 package com.hsz.bootentity;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 
 import java.util.List;
@@ -7,45 +8,19 @@ import java.util.List;
 /**
  * @author created by hsz 2020/11/23 11:38
  */
-
+@Data
 public class TestVO {
-    private List<String> xxList;
 
-    private List<String> yList;
+    @JsonProperty("xAxis")
+    private String xAxis;
 
-    private List<String> xAxis;
+    private String yAxis;
 
-    public List<String> getXxList() {
-        return xxList;
+    public String getyAxis() {
+        return yAxis;
     }
 
-    public void setXxList(List<String> xxList) {
-        this.xxList = xxList;
+    public void setyAxis(String yAxis) {
+        this.yAxis = yAxis;
     }
-
-    public List<String> getyList() {
-        return yList;
-    }
-
-    public void setyList(List<String> yList) {
-        this.yList = yList;
-    }
-
-    public List<String> getxAxis() {
-        return xAxis;
-    }
-
-    public void setxAxis(List<String> xAxis) {
-        this.xAxis = xAxis;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    private String name;
 }
